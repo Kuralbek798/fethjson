@@ -33,13 +33,22 @@
     let cx: number = a + b;
 	console.log(cx, aaa, cc, bb, aa, ac, d, c, b );
 
-function getFullName(firstname: string,surname:string):string
+function getFullName(userEntity:{firstname: string, surname:string}):string
 {
-    return`${firstname} ${surname}`;
+    return`${userEntity.firstname} ${userEntity.surname}`;
 }
 
-const getFullNameArrow = (firstname:string,surname: string):string =>{
-    return `${firstname} ${surname}`;
-}
+// const getFullNameArrow = (userEntity):string =>{
+//     return `${firstname} ${surname}`;
+// }
 
-console.log(getFullName('Куралбек','Агубаев'))
+const user ={
+firstname: 'Куралбек',
+surname: 'Агубаев',
+city: 'Almaty',
+age:33
+
+};
+
+console.log(getFullName(user));
+

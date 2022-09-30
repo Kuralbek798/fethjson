@@ -32,10 +32,16 @@ let aaa = true;
 aaa = false;
 let cx = a + b;
 console.log(cx, aaa, cc, bb, aa, ac, d, c, b);
-function getFullName(firstname, surname) {
-    return `${firstname} ${surname}`;
+function getFullName(userEntity) {
+    return `${userEntity.firstname} ${userEntity.surname}`;
 }
-const getFullNameArrow = (firstname, surname) => {
-    return `${firstname} ${surname}`;
+// const getFullNameArrow = (userEntity):string =>{
+//     return `${firstname} ${surname}`;
+// }
+const user = {
+    firstname: 'Куралбек',
+    surname: 'Агубаев',
+    city: 'Almaty',
+    age: 33
 };
-console.log(getFullName('Куралбек', 'Агубаев'));
+console.log(getFullName(user));
